@@ -35,8 +35,6 @@ manifest:
       url-base: https://github.com/NordicSemiconductor
     - name: pelioniot
       url-base: https://github.com/PelionIoT
-    - name: memfault
-      url-base: https://github.com/memfault
 
   # If not otherwise specified, the projects below should be obtained
   # from the ncs remote.
@@ -56,7 +54,7 @@ manifest:
     # https://developer.nordicsemi.com/nRF_Connect_SDK/doc/latest/zephyr/guides/modules.html
     - name: zephyr
       repo-path: sdk-zephyr
-      revision: v2.6.0-rc1-ncs1-rc1
+      revision: 2541c598706e87d0475f650b9a27e89a701c58c6
       import:
         # In addition to the zephyr repository itself, NCS also
         # imports the contents of zephyr/west.yml at the above
@@ -98,17 +96,16 @@ manifest:
     # changes.
     - name: mcuboot
       repo-path: sdk-mcuboot
-      revision: v1.7.0-ncs1-rc1
+      revision: bbca448b64fc7e0e10122dab6909649068c22a0e
       path: bootloader/mcuboot
     - name: nrfxlib
       repo-path: sdk-nrfxlib
       path: nrfxlib
-      revision: d1a5b3613f1ea574a5ee7d43b277bbe28633f593
-
+      revision: pull/head/1
     - name: trusted-firmware-m
       repo-path: sdk-trusted-firmware-m
       path: modules/tee/tfm
-      revision: v1.3.99-ncs1-rc1
+      revision: b9a9ba684026c9bab73ae7ddfb50daacc1138324
     - name: tfm-mcuboot # This is used by the trusted-firmware-m module.
       repo-path: sdk-mcuboot
       path: modules/tee/tfm-mcuboot
@@ -116,11 +113,11 @@ manifest:
     - name: openthread
       repo-path: sdk-openthread
       path: modules/lib/openthread
-      revision: thread-reference-20200818-ncs1-rc1
+      revision: 9c01aff66245c3989536a8c96dae3c6ec6402d0d
     - name: matter
       repo-path: sdk-connectedhomeip
       path: modules/lib/matter
-      revision: e73ee78cfa6b8d57952a380eac43de6ba0bb27f9
+      revision: dddca7629f68a040e97104a74387b66ca753d715
       submodules:
         - name: nlio
           path: third_party/nlio/repo
@@ -150,7 +147,7 @@ manifest:
     - name: mbedtls-nrf
       path: mbedtls
       repo-path: mbedtls
-      revision: mbedtls-2.26.0
+      revision: mbedtls-2.24.0
       remote: armmbed
     - name: nanopb
       path: modules/lib/nanopb
@@ -170,18 +167,14 @@ manifest:
       path: modules/lib/cddl-gen
     - name: homekit
       repo-path: sdk-homekit
-      revision: ae8feb0c6fa9220304edc0708b52a2968350ea56
+      revision: f24fcd806a21d6ff0152a05a0b150090cee3fe4c
       groups:
       - homekit
     - name: find-my
       repo-path: sdk-find-my
-      revision: 9c8305df8603374ec304ae46f6048f63ab8f9373
+      revision: 07c8d591b47c4c3609f29871be031c9af39401e1
       groups:
       - find-my
-    - name: memfault-firmware-sdk
-      path: modules/lib/memfault-firmware-sdk
-      revision: 0.21.1
-      remote: memfault
 
   # West-related configuration for the nrf repository.
   self:
