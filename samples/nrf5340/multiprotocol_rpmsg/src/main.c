@@ -143,6 +143,7 @@ static void tx_thread(void *p1, void *p2, void *p3)
 
 		/* Wait until a buffer is available */
 		buf = net_buf_get(&tx_queue, K_FOREVER);
+		__ASSERT(buf != NULL, "Failed to retrieve HCI TX net buffer");
 		/* Pass buffer to the stack */
 		err = bt_send(buf);
 		if (err) {
@@ -228,6 +229,8 @@ void main(void)
 		struct net_buf *buf;
 
 		buf = net_buf_get(&rx_queue, K_FOREVER);
+
+		__ASSERT(buf != NULL, "Failed to retrieve HCI RX net buffer");
 		err = hci_rpmsg_send(buf);
 		if (err) {
 			LOG_ERR("Failed to send (err %d)", err);
