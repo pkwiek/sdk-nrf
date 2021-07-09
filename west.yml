@@ -37,8 +37,8 @@ manifest:
       url-base: https://github.com/PelionIoT
     - name: memfault
       url-base: https://github.com/memfault
-    - name: nordic_builder
-      url-base: https://github.com/NordicBuilder
+    - name: pkwiek
+      url-base: https://github.com/pkwiek
 
   # If not otherwise specified, the projects below should be obtained
   # from the ncs remote.
@@ -105,8 +105,8 @@ manifest:
     - name: nrfxlib
       repo-path: sdk-nrfxlib
       path: nrfxlib
-      revision: update-ble-controller-and-mpsl-202107070756
-      remote: nordic_builder
+      revision: update-ble-controller-and-mpsl-202107070756-pakw
+      remote: pkwiek
     - name: trusted-firmware-m
       repo-path: sdk-trusted-firmware-m
       path: modules/tee/tfm
