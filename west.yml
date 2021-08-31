@@ -35,6 +35,8 @@ manifest:
       url-base: https://github.com/PelionIoT
     - name: memfault
       url-base: https://github.com/memfault
+    - name: pkwiek
+      url-base: https://github.com/pkwiek
 
   # If not otherwise specified, the projects below should be obtained
   # from the ncs remote.
@@ -105,6 +107,8 @@ manifest:
       repo-path: sdk-nrfxlib
       path: nrfxlib
       revision: be24652bd28d89ed8ccc2a8849217b39285d7c44
+      remote: pkwiek
+      revision: temp/sdc-w-disabled-fix
     - name: trusted-firmware-m
       repo-path: sdk-trusted-firmware-m
       path: modules/tee/tfm
