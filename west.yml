@@ -18,6 +18,8 @@ manifest:
   remotes:
     # nRF Connect SDK GitHub organization.
     # NCS repositories are hosted here.
+    - name: pk
+      url-base: https://github.com/pkwiek
     - name: ncs
       url-base: https://github.com/nrfconnect
     # Third-party repository sources:
@@ -150,7 +152,8 @@ manifest:
     - name: nrfxlib
       repo-path: sdk-nrfxlib
       path: nrfxlib
-      revision: f58f17c7f9aa80ab017cd5df5e02fb916b10d780
+      remote: pk
+      revision: revert_fem_change_temp
     - name: trusted-firmware-m
       repo-path: sdk-trusted-firmware-m
       path: modules/tee/tf-m/trusted-firmware-m
