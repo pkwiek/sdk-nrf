@@ -153,7 +153,7 @@ manifest:
       repo-path: sdk-nrfxlib
       path: nrfxlib
       remote: pk
-      revision: revert_fem_change_temp
+      revision: speed_up_spi_fem
     - name: trusted-firmware-m
       repo-path: sdk-trusted-firmware-m
       path: modules/tee/tf-m/trusted-firmware-m
