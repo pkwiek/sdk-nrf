@@ -7,6 +7,7 @@ tests:
     build_only: true
     integration_platforms:
       - nrf5340dk/nrf5340/cpunet
+      - nrf7120dk/nrf7120/cpuapp
       - nrf54l15dk/nrf54l15/cpuapp
       - nrf54lm20dk/nrf54lm20a/cpuapp
       - nrf54lm20dk/nrf54lm20b/cpuapp
@@ -14,6 +15,7 @@ tests:
       - nrf54lc10dk/nrf54lc10a/cpuapp
     platform_allow:
       - nrf5340dk/nrf5340/cpunet
+      - nrf7120dk/nrf7120/cpuapp
       - nrf54l15dk/nrf54l15/cpuapp
       - nrf54lm20dk/nrf54lm20a/cpuapp
       - nrf54lm20dk/nrf54lm20b/cpuapp
